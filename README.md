@@ -6,22 +6,22 @@ python simple cache
 ```python
     PySimpleCache.refresh()	
 ```
-* refresh one certain data
-use key-argument `refresh=True`
+* refresh one certain data<br/>
+__use key-argument `refresh=True`__
 ```python
-		@useCache		
-		def func(arg1, ...): 		
+	@useCache		
+	def func(arg1, ...): 		
 		 ...		
-		func(arg1, ..., refresh=True)		
+	func(arg1, ..., refresh=True)		
 ```
 	1. some drawbacks here: 
-		1. function must has default arguments `*args` and `**kargs`</li>
-		2. 'refresh' key-argument is unclear for function itself</li>
+		* function must has default arguments `*args` and `**kargs`</li>
+		* 'refresh' key-argument is unclear for function itself</li>
 
 or, <br/> 
-use wrapper function `recache(func)(func_arguments)`
+__use wrapper function `recache(func)(func_arguments)`__
 ```python
-		recache(func)(arg1, ...)		
+	recache(func)(arg1, ...)		
 ```
 * **Underlying Problems**
 	* multiprocessing
