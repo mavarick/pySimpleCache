@@ -14,10 +14,9 @@ use key-argument `refresh=True`
 		 ...		
 		func(arg1, ..., refresh=True)		
 ```
-<ol>some drawbacks here: 
-	<li>function must has default arguments `*args` and `**kargs`</li>
-	<li>'refresh' key-argument is unclear for function itself</li>
-</ol>
+* some drawbacks here: 
+	1. function must has default arguments `*args` and `**kargs`</li>
+	2. 'refresh' key-argument is unclear for function itself</li>
 
 or, <br/> 
 use wrapper function `recache(func)(func_arguments)`
