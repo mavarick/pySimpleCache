@@ -7,7 +7,9 @@ python simple cache
     PySimpleCache.refresh()	
 ```
 * refresh one certain data<br/>
+
 __use key-argument `refresh=True`__
+
 ```python
 	@useCache		
 	def func(arg1, ...): 		
