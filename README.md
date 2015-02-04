@@ -2,11 +2,11 @@
 python simple cache 
 
 ## How to Refresh the cache
-### refresh the total cache
+* refresh the total cache
 	PySimpleCache.refresh()
 
-### refresh one certain data
-#### use key-argument `refresh=True`
+* refresh one certain data
+1. use key-argument `refresh=True`
 >            @useCache
 >            def func(arg1, ...): 
 >                ...
@@ -16,7 +16,7 @@ python simple cache
 drawbacks:
 - function must has default arguments `*args` and `**kargs`
 - 'refresh' key-argument is unclear for function itself
-#### use function `recache(func)(func_arguments)`
+2. use function `recache(func)(func_arguments)`
 > recache(func)(arg1, ...)
 
 drawbacks:
