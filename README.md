@@ -12,11 +12,12 @@ use key-argument `refresh=True`
 		@useCache		
 		def func(arg1, ...): 		
 		 ...		
-		func(arg1, ..., **refresh=True**)		
+		func(arg1, ..., refresh=True)		
 ```
-some drawbacks here: 
-	1. function must has default arguments `*args` and `**kargs`
-	2. 'refresh' key-argument is unclear for function itself
+<ul>some drawbacks here: 
+	<li>function must has default arguments `*args` and `**kargs`</li>
+	<li>'refresh' key-argument is unclear for function itself</li>
+</ul>
 
 or, use function `recache(func)(func_arguments)`
 ```python
