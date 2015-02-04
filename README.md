@@ -3,9 +3,9 @@ python simple cache
 
 ## How to Refresh the cache
 1. refresh the total cache
-	```python
-		PySimpleCache.refresh()	
-	```
+ ```python
+    PySimpleCache.refresh()	
+ ```
 2. refresh one certain data
 	1. use key-argument `refresh=True`
 		* drawbacks:
