@@ -7,7 +7,7 @@ python simple cache
 PySimpleCache.refresh()
 ```
 2. refresh one certain data
-       1. use key-argument `refresh=True`
+       - use key-argument `refresh=True`
             for:
 ```
             @useCache
@@ -19,7 +19,7 @@ PySimpleCache.refresh()
             - drawbacks:
                 - function must has default arguments `*args` and `**kargs`
                 - 'refresh' key-argument is unclear for function itself
-        2. use function `recache(func)(func_arguments)`
+        - use function `recache(func)(func_arguments)`
 ```
             recache(func)(arg1, ...)
 ```
