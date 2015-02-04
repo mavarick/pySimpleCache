@@ -3,14 +3,14 @@ python simple cache
 
 ## How to Refresh the cache
 * refresh the total cache
-	PySimpleCache.refresh()
+	PySimpleCache.refresh()		
 
 * refresh one certain data
 	1. use key-argument `refresh=True`
 		@useCache		
 		def func(arg1, ...): 		
 		 ...		
-		# refresh the func		
+		\# refresh the func		
 		func(arg1, ..., refresh=True)		
 
 		drawbacks:
