@@ -11,6 +11,9 @@ class PySimpleCache(dict):
         if not cls._instance:
             cls._instance = dict.__new__(cls)
         return cls._instance
+    @classmethod
+    def refresh(cls):
+        cls._instance = None
 
     def setDisable(self, value):
         PySimpleCache._disable = value
