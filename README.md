@@ -6,24 +6,24 @@ python simple cache
 	PySimpleCache.refresh()
 
 * refresh one certain data
-1. use key-argument `refresh=True`
->            @useCache
->            def func(arg1, ...): 
->                ...
->            # refresh the func
->            func(arg1, ..., refresh=True)
+	1. use key-argument `refresh=True`
+		@useCache		
+		def func(arg1, ...): 		
+		 ...		
+		# refresh the func		
+		func(arg1, ..., refresh=True)		
 
-drawbacks:
-- function must has default arguments `*args` and `**kargs`
-- 'refresh' key-argument is unclear for function itself
-2. use function `recache(func)(func_arguments)`
-> recache(func)(arg1, ...)
+		drawbacks:
+		- function must has default arguments `*args` and `**kargs`
+		- 'refresh' key-argument is unclear for function itself
+	2. use function `recache(func)(func_arguments)`
+		recache(func)(arg1, ...)		
 
-drawbacks:
-- the writing style is a little puzzled!
+		drawbacks:
+		- the writing style is a little puzzled!
 
 ### **Underlying Problems**
-        a) multiprocessing
+	1. multiprocessing
     
 
 ## todo list
