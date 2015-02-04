@@ -19,7 +19,8 @@ use key-argument `refresh=True`
 	<li>'refresh' key-argument is unclear for function itself</li>
 </ol>
 
-or, use function `recache(func)(func_arguments)`
+or, <br/> 
+use wrapper function `recache(func)(func_arguments)`
 ```python
 		recache(func)(arg1, ...)		
 ```
