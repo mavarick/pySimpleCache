@@ -7,13 +7,21 @@ python simple cache
     PySimpleCache.refresh()	
 ```
 * refresh one certain data
-	1. use key-argument `refresh=True`
-		* drawbacks:
-			- function must has default arguments `*args` and `**kargs`
-			- 'refresh' key-argument is unclear for function itself
-	2. use function `recache(func)(func_arguments)`
-		* drawbacks:
-			- the writing style is a little puzzled!
+use key-argument `refresh=True`
+```python
+		@useCache		
+		def func(arg1, ...): 		
+		 ...		
+		\# refresh the func		
+		func(arg1, ..., refresh=True)		
+```
+this method need: 
+	1. function must has default arguments `*args` and `**kargs`
+	2. 'refresh' key-argument is unclear for function itself
+or, use function `recache(func)(func_arguments)`
+```python
+		recache(func)(arg1, ...)		
+```
 * **Underlying Problems**
 	1. multiprocessing
     
