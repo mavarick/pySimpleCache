@@ -12,8 +12,7 @@ use key-argument `refresh=True`
 		@useCache		
 		def func(arg1, ...): 		
 		 ...		
-		\# refresh the func		
-		func(arg1, ..., refresh=True)		
+		func(arg1, ..., **refresh=True**)		
 ```
 this method need: 
 	1. function must has default arguments `*args` and `**kargs`
@@ -23,7 +22,7 @@ or, use function `recache(func)(func_arguments)`
 		recache(func)(arg1, ...)		
 ```
 * **Underlying Problems**
-	1. multiprocessing
+	* multiprocessing
     
 ## TODO
 - [ ] 增加缓存最大量限制
