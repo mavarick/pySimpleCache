@@ -1,8 +1,8 @@
 # pySimpleCache
 python simple cache 
 
-## Refresh the cache
-* refresh the total cache
+## Refresh cache
+* refresh total cache
 ```python
     PySimpleCache.refresh()	
 ```
@@ -14,9 +14,10 @@ use key-argument `refresh=True`
 		 ...		
 		func(arg1, ..., **refresh=True**)		
 ```
-this method need: 
+some drawbacks here: 
 	1. function must has default arguments `*args` and `**kargs`
 	2. 'refresh' key-argument is unclear for function itself
+
 or, use function `recache(func)(func_arguments)`
 ```python
 		recache(func)(arg1, ...)		
