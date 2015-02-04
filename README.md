@@ -14,10 +14,10 @@ use key-argument `refresh=True`
 		 ...		
 		func(arg1, ..., refresh=True)		
 ```
-<ul>some drawbacks here: 
+<ol>some drawbacks here: 
 	<li>function must has default arguments `*args` and `**kargs`</li>
 	<li>'refresh' key-argument is unclear for function itself</li>
-</ul>
+</ol>
 
 or, use function `recache(func)(func_arguments)`
 ```python
