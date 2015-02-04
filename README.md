@@ -2,28 +2,33 @@
 python simple cache 
 
 ## How to Refresh the cache
-    two ways to refresh the cache for certain keys:
-    (1) use key arguments
-
-    @useCache
-    def func(*args, **kargs):
-        ...
-
-    func(refresh=True)
-
-    the drawback is: 
-     a) the functions needed to be cached must have default arguments `*args` 
-        and `kargs`
-     b) 'refresh' key-argument is unclear for external functions
-    (2) use decorator `recache` before functions, like:
-     recache(func)(...)
-     with drawback:
-      a) the writing style is a little puzzled!
-
-    When use multithreading! there accurs problems [TODO]
+    (1) refresh the total cache
+        `PySimpleCache.refresh()`
+    (2) refresh one certain data
+        a) use key-argument `refresh=True`
+            for:
+            `
+            @useCache
+            def func(arg1, ...): 
+                ...
+            # refresh the func
+            func(arg1, ..., refresh=True)
+            `
+            - drawbacks:
+                - function must has default arguments `*args` and `**kargs`
+                - 'refresh' key-argument is unclear for function itself
+        b) use function `recache(func)(func_arguments)`
+            `
+            recache(func)(arg1, ...)
+            `
+            - drawbacks:
+                - the writing style is a little puzzled!
+    (3) **Underlying Problems**
+        a) multiprocessing
+    
 
 ## todo list
-    1, 增加缓存最大量限制
-    2, 增加多线程实现LRU机制
-    3, 增加调用计数，时效
-    4, cache的刷新
+    * 增加缓存最大量限制
+    * 增加多线程实现LRU机制
+    * 增加调用计数，时效
+    * ~~cache的刷新~~
