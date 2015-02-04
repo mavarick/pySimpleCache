@@ -2,9 +2,9 @@
 python simple cache 
 
 ## How to Refresh the cache
-* refresh the total cache
+1. refresh the total cache
 
-* refresh one certain data
+2. refresh one certain data
 	1. use key-argument `refresh=True`
 		* drawbacks:
 			- function must has default arguments `*args` and `**kargs`
@@ -12,7 +12,7 @@ python simple cache
 	2. use function `recache(func)(func_arguments)`
 		* drawbacks:
 			- the writing style is a little puzzled!
-### **Underlying Problems**
+3. **Underlying Problems**
 	1. multiprocessing
     
 ## TODO
