@@ -31,5 +31,5 @@ __use wrapper function `recache(func)(func_arguments)`__
 ## TODO
 - [ ] 增加缓存最大量限制
 - [ ] 增加多线程实现LRU机制
-- [ ] 增加调用计数，时效
+- [x] 增加调用计数，时效
 - [x] ~cache的刷新~~

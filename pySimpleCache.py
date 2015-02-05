@@ -50,6 +50,9 @@ class PySimpleCache(dict):
             result = value
         return result
 
+    def get_size(self):
+        return len(self)
+
 def useCache(func):
     def wrapper(*args, **kargs):
         _cache_dict = PySimpleCache.getInstance()
