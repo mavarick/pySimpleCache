@@ -34,3 +34,7 @@ GetValue()
 
 GetValue(refresh=True)
 
+GetValue()
+GetValue()
+GetValue()
+GetValue()
